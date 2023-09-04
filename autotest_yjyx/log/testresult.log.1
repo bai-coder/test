@@ -1,0 +1,129 @@
+
+
+===   [ 收集测试用例 ]  === 
+
+
+== cases\空白环境\__st__.py 
+
+
+== cases\空白环境\班级管理.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\有班级\__st__.py 
+
+
+== cases\空白环境\有班级\教师登录.py 
+
+
+== cases\空白环境\有班级\教师管理.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\有班级\班级管理.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\有班级\有老师\__st__.py 
+
+
+== cases\空白环境\有班级\有老师\学生管理.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\有班级\有老师\教师管理.py 
+
+
+** no cases in this file , skip it.
+
+== cases\空白环境\有班级\有老师\有学生\__st__.py 
+
+
+== cases\空白环境\有班级\有老师\有学生\学生管理.py 
+
+
+** no cases in this file , skip it.
+
+
+===   [ 执行测试用例 ]  === 
+
+预备执行用例数量 : 1
+
+
+
+  ========= 测试开始 : 20230904_224501 =========
+
+
+
+>>> cases\空白环境\
+
+[ suite setup ] cases\空白环境\
+清空所有班级数据
+清空所有教师数据
+清空所有学生数据
+
+
+>>> cases\空白环境\有班级\
+
+[ suite setup ] cases\空白环境\有班级\
+创建3个班级
+
+
+>>> cases\空白环境\有班级\教师登录.py
+
+* 老师登录1 - tc005001  -  2023-09-04 22:45:01
+
+[ case setup ] 老师登录1 - tc005001
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 添加教师 
+
+
+-- 第 2 步 -- 用教师账号登录系统 
+
+
+-- 第 3 步 -- 检查首页信息 
+
+
+** 检查点 **  检查首页信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师登录1 - tc005001
+清除添加的教师
+
+[ suite teardown ] cases\空白环境\有班级\
+清空班级
+
+[ suite teardown ] cases\空白环境\
+暂无任务
+
+
+  ========= 测试结束 : 20230904_224504 =========
+
+
+  耗时    : 3.671 秒
+
+
+  预备执行用例数量 : 1
+
+  实际执行用例数量 : 1
+
+  通过 : 1
+
+  失败 : 0
+
+  异常 : 0
+
+  套件初始化失败 : 0
+
+  套件清除  失败 : 0
+
+  用例初始化失败 : 0
+
+  用例清除  失败 : 0

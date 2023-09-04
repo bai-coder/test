@@ -1,5 +1,5 @@
 import requests,json
-from cfg.cfg import *
+from cfg import *
 from pprint import pprint
 
 class Teacher:
@@ -60,13 +60,9 @@ class Teacher:
         '''
 
         # 处理参数classlist  : '23,  24 '
-        if ',' in classlist:
-            idList= classlist.split(',')
-            classlist2 = [{'id':int(cid.strip())} for cid in idList]
-        else:
-            classlist3 = {}
-            classlist3['id'] = int(classlist)
-            classlist2.append(classlist3)
+        idList= classlist.split(',')
+        classlist2 = [{'id':int(cid.strip())} for cid in idList]
+        
         payload  = {
             'vcode'  : g_vcode,
             'action' : 'add',

@@ -3,42 +3,47 @@
 ===   [ 收集测试用例 ]  === 
 
 
-== cases/空白环境/__st__.py 
+== cases\空白环境\__st__.py 
 
 
-== cases/空白环境/班级管理.py 
-
-
-== cases/空白环境/有班级/__st__.py 
-
-
-== cases/空白环境/有班级/教师管理.py 
+== cases\空白环境\班级管理.py 
 
 
 ** no cases in this file , skip it.
 
-== cases/空白环境/有班级/班级管理.py 
+== cases\空白环境\有班级\__st__.py 
+
+
+== cases\空白环境\有班级\教师登录.py 
+
+
+== cases\空白环境\有班级\教师管理.py 
 
 
 ** no cases in this file , skip it.
 
-== cases/空白环境/有班级/有老师/__st__.py 
-
-
-== cases/空白环境/有班级/有老师/教师管理.py 
+== cases\空白环境\有班级\班级管理.py 
 
 
 ** no cases in this file , skip it.
 
-== cases/空白环境/有班级/有老师/学生管理.py 
+== cases\空白环境\有班级\有老师\__st__.py 
+
+
+== cases\空白环境\有班级\有老师\学生管理.py 
 
 
 ** no cases in this file , skip it.
 
-== cases/空白环境/有班级/有老师/有学生/__st__.py 
+== cases\空白环境\有班级\有老师\教师管理.py 
 
 
-== cases/空白环境/有班级/有老师/有学生/学生管理.py 
+** no cases in this file , skip it.
+
+== cases\空白环境\有班级\有老师\有学生\__st__.py 
+
+
+== cases\空白环境\有班级\有老师\有学生\学生管理.py 
 
 
 ** no cases in this file , skip it.
@@ -50,95 +55,33 @@
 
 
 
-  ========= 测试开始 : 20230822_110425 =========
+  ========= 测试开始 : 20230904_231046 =========
 
 
 
->>> cases/空白环境/
+>>> cases\空白环境\
 
-[ suite setup ] cases/空白环境/
+[ suite setup ] cases\空白环境\
 清空所有班级数据
-suite setup fail | HTTPConnectionPool(host='192.168.1.5', port=80): Max retries exceeded with url: /api/3school/school_classes?vcode=00000004074389951477&action=list_classes_by_schoolgrade (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x102844450>, 'Connection to 192.168.1.5 timed out. (connect timeout=None)')) 
+清空所有教师数据
+suite setup fail | name 'g_vcode' is not defined 
 Traceback:
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
-    raise err
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
-    sock.connect(sa)
-TimeoutError: [Errno 60] Operation timed out
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
-    response = self._make_request(
-               ^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 496, in _make_request
-    conn.request(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 388, in request
-    self.endheaders()
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1278, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1038, in _send_output
-    self.send(msg)
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 976, in send
-    self.connect()
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 236, in connect
-    self.sock = self._new_conn()
-                ^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connection.py", line 209, in _new_conn
-    raise ConnectTimeoutError(
-urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x102844450>, 'Connection to 192.168.1.5 timed out. (connect timeout=None)')
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
-    resp = conn.urlopen(
-           ^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
-    retries = retries.increment(
-              ^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
-    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.5', port=80): Max retries exceeded with url: /api/3school/school_classes?vcode=00000004074389951477&action=list_classes_by_schoolgrade (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x102844450>, 'Connection to 192.168.1.5 timed out. (connect timeout=None)'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/hytest/utils/runner.py", line 501, in execTest
-    suite_setup()
-  File "/Users/baijinhang/Documents/项目实战/autotest_yjyx/cases/空白环境/__st__.py", line 10, in suite_setup
-    scm.delete_all_classes()
-  File "/Users/baijinhang/Documents/项目实战/autotest_yjyx/lib/api/SClass.py", line 79, in delete_all_classes
-    res = self.list_class()
-          ^^^^^^^^^^^^^^^^^
-  File "/Users/baijinhang/Documents/项目实战/autotest_yjyx/lib/api/SClass.py", line 38, in list_class
-    res = requests.get(
-          ^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/api.py", line 73, in get
-    return request("get", url, params=params, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/api.py", line 59, in request
-    return session.request(method=method, url=url, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/requests/adapters.py", line 507, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: HTTPConnectionPool(host='192.168.1.5', port=80): Max retries exceeded with url: /api/3school/school_classes?vcode=00000004074389951477&action=list_classes_by_schoolgrade (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x102844450>, 'Connection to 192.168.1.5 timed out. (connect timeout=None)'))
+  File "D:\学习\yjyx\test\autotest_yjyx\cases\空白环境\__st__.py", line 12, in suite_setup
+    tm.delete_all_teacheres()
+  File "D:\学习\yjyx\test\autotest_yjyx\lib\api\Teacher.py", line 130, in delete_all_teacheres
+    res = self.list_teacher()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\学习\yjyx\test\autotest_yjyx\lib\api\Teacher.py", line 31, in list_teacher
+    'vcode': g_vcode,
+             ^^^^^^^
+NameError: name 'g_vcode' is not defined
 
 
 
-  ========= 测试结束 : 20230822_110540 =========
+  ========= 测试结束 : 20230904_231046 =========
 
 
-  耗时    : 75.029 秒
+  耗时    : 0.024 秒
 
 
   预备执行用例数量 : 1

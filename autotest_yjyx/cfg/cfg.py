@@ -2,7 +2,7 @@
 g_vcode = '00000004074389951477'
 
 #
-g_api_server = 'http://192.168.1.5'
+g_api_server = 'http://192.168.1.6'
 
 g_api_url_class = g_api_server + '/api/3school/school_classes'
 
