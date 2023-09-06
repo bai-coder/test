@@ -1,5 +1,5 @@
 import requests,json
-from cfg import *
+from cfg.cfg import *
 from pprint import pprint
 
 class Teacher:
